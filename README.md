@@ -1,14 +1,14 @@
 # Microservice Products
 
-Proyecto de microservicio en ** Spring Boot ** que se va encargar de la gestión de los productos y las distintas areas de estos.
+Proyecto de microservicio en **Spring Boot** que se va encargar de la gestión de los productos y las distintas areas de estos.
 
 Este proyecto se trabaja con TDD.
 
-La documentación de la API REST se genera con ** Swagger ** .
+La documentación de la API REST se genera con **Swagger** .
 
 La base de datos que se va usar es PostgresDb.
 
-Para su despliegue se va incluir el plugin de ** Spotify/Dockerfile ** para generar la imagen de este.
+Para su despliegue se va incluir el plugin de **Spotify/Dockerfile** para generar la imagen de este.
 
 La configuración del puerto y el context path se encuentran en src/resources/application.yml
 
