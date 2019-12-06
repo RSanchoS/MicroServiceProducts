@@ -1,0 +1,30 @@
+spring:
+# Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/products_db?createDatabaseIfNotExist=true
+    username: myuserdb
+    password: mysecretpassword
+    initialization-mode: always
+# JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    open-in-view: false
+    generate-ddl: false
+    properties:
+      hibernate:
+       temp:
+        use_jdbc_metadata_defaults:false     
+      jdbc:
+       lob:
+        non_contextual_creation:true
+logging:
+  level:
+    org.springframework: INFO
+    org.hibernate: WARN
+    # Hides HHH000424: Disabling contextual LOB creation as createClob() method threw error 
+    org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl: WARN

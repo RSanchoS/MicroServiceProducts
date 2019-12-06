@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+   db:
+    image: postgres
+    container_name: db_postgres
+    ports: 
+     - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRESUSER}
+      POSTGRES_PASSWORD: ${POSTGRESPASS}
+      POSTGRES_DB: ${POSTGRESDBNAME}
+       
