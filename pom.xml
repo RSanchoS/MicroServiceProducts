@@ -20,6 +20,7 @@
 		<dockerfile-maven-version>1.4.13</dockerfile-maven-version>
 		<fabric8.version>0.31.0</fabric8.version>
 		<fabric8.javaimage.alias>${project.name}</fabric8.javaimage.alias>
+		<fabric8.db.name>db-local</fabric8.db.name>
 	</properties>
 
 	<dependencies>
@@ -99,6 +100,10 @@
                 			</wait>
               				</run>
 						</image>  
+						<!-- <image>
+							<name>${fabric8.db.name}</name>
+							<alias>${fabric8.db.name</alias> 
+						</image> -->
 					</images>
 					</configuration>
 			</plugin>
