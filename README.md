@@ -8,7 +8,7 @@ La documentación de la API REST se genera con **Swagger** .
 
 La base de datos que se va usar es PostgresDb.
 
-Para su despliegue se va incluir el plugin de **Spotify/Dockerfile** para generar la imagen de este.
+Para su despliegue se va incluir el plugin de **fabric8/docker-maven-plugin** para generar la imagen de este.
 
 La configuración del puerto y el context path se encuentran en src/resources/application.yml
 
@@ -18,6 +18,7 @@ La configuración del puerto y el context path se encuentran en src/resources/ap
 - ✅ Configuración de la base de datos (conexion)
 - ✅ Configuración de la documentacion de Swagger
 - ✅ Configuración del despliegue de la imagen con Docker.
+- Configuración de bbdd para test de integración
 
 ### TODO-LIST Project
 
@@ -27,7 +28,6 @@ $ mvn spring-boot:run -> Lanza el proyecto
 
 $ mvn test -> Lanza todos los test que se encuentren
 
-$ mvn deploy -> Para la creacion y el despliegue de la imagen en un repositorio
 
 ### PostgresDB
 
@@ -50,7 +50,12 @@ Para ver las anotaciones de Swagger
 
 ### Docker maven
 
-https://github.com/spotify/dockerfile-maven
+https://dmp.fabric8.io/#example
+
+https://github.com/fabric8io/docker-maven-plugin
+
+$ mvn docker:build -> Genera la imagen 
+$ mvn docker:start -> Arranca el contenedor
 
 ### Lombok
 
