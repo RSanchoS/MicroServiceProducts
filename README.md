@@ -18,6 +18,7 @@ La configuración del puerto y el context path se encuentran en src/resources/ap
 - ✅ Configuración de la base de datos (conexion)
 - ✅ Configuración de la documentacion de Swagger
 - ✅ Configuración del despliegue de la imagen con Docker.
+- ✅ Configuración de Mapstructure para realizar mapeos automaticos.
 - Configuración de bbdd para test de integración
 
 ### TODO-LIST Project
@@ -60,3 +61,7 @@ $ mvn docker:start -> Arranca el contenedor
 ### Lombok
 
 https://projectlombok.org/features/all
+
+### Mapstruc
+
+https://mapstruct.org
