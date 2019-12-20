@@ -1,2 +1,8 @@
+/Users/robertosanchosolis/Documents/Dev/Java/MicroServiceProducts/src/main/java/com/roberto/microserviceproducts/models/entitys/TypeCar.java
 /Users/robertosanchosolis/Documents/Dev/Java/MicroServiceProducts/src/main/java/com/roberto/microserviceproducts/config/SwaggerConfig.java
 /Users/robertosanchosolis/Documents/Dev/Java/MicroServiceProducts/src/main/java/com/roberto/microserviceproducts/MicroserviceproductsApplication.java
+/Users/robertosanchosolis/Documents/Dev/Java/MicroServiceProducts/src/main/java/com/roberto/microserviceproducts/models/entitys/ManufacturingDetail.java
+/Users/robertosanchosolis/Documents/Dev/Java/MicroServiceProducts/src/main/java/com/roberto/microserviceproducts/models/entitys/Engine.java
+/Users/robertosanchosolis/Documents/Dev/Java/MicroServiceProducts/src/main/java/com/roberto/microserviceproducts/models/entitys/Brand.java
+/Users/robertosanchosolis/Documents/Dev/Java/MicroServiceProducts/src/main/java/com/roberto/microserviceproducts/models/entitys/TypeEngine.java
+/Users/robertosanchosolis/Documents/Dev/Java/MicroServiceProducts/src/main/java/com/roberto/microserviceproducts/models/entitys/Car.java
