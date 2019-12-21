@@ -21,13 +21,11 @@ La configuración del puerto y el context path se encuentran en src/resources/ap
 - ✅ Configuración de Mapstructure para realizar mapeos automaticos.
 - Configuración de bbdd para test de integración
 
-### TODO-LIST Project
-
 ### Comandos utiles
 
-$ mvn spring-boot:run -> Lanza el proyecto 
+`` $ mvn spring-boot:run `` -> Lanza el proyecto 
 
-$ mvn test -> Lanza todos los test que se encuentren
+`` $ mvn test ``-> Lanza todos los test que se encuentren
 
 
 ### PostgresDB
@@ -37,7 +35,7 @@ Toda la configuración username, pass y dbname se encuentra en docker/.env
 La base de datos que se va usar en este microservicio es ${POSTGRESDBNAME}.
 
 En archivo docker/docker-compose.yml esta el contenedor de la base de datos para pruebas 
-    $ docker-compose up -d -> Para lanzar la bbdd
+    `` $ docker-compose up -d `` -> Para lanzar la bbdd
 
 ### Swagger
 
