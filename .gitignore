@@ -30,3 +30,8 @@ target/*.xml
 
 
 .factorypath
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+target/surefire-reports/TEST-com.roberto.microserviceproducts.MicroserviceproductsApplicationTests.xml
+target/microserviceproducts-0.0.1-SNAPSHOT.jar
+target/microserviceproducts-0.0.1-SNAPSHOT.jar.original
+.sts4-cache/classpath-data.json
