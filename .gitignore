@@ -26,6 +26,7 @@ target/*.jar
 target/*.jar.original
 target/*.txt
 target/*.xml
+target/*.lst
 
 
 
