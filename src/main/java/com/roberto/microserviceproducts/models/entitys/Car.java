@@ -32,7 +32,9 @@ import lombok.Data;
 @ApiModel
 public class Car {
 
-    @Id
+
+
+	@Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

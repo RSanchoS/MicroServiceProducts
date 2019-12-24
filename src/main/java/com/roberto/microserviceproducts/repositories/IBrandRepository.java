@@ -1,4 +1,4 @@
-package com.roberto.repositories;
+package com.roberto.microserviceproducts.repositories;
 
 import com.roberto.microserviceproducts.models.entitys.Brand;
 
