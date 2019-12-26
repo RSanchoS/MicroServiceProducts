@@ -10,7 +10,7 @@ import org.mapstruct.factory.Mappers;
 /**
  * CarMapper
  */
-@Mapper
+@Mapper(componentModel = "spring")
 public interface ICarMapper {
 
     ICarMapper INSTANCE = Mappers.getMapper(ICarMapper.class);

@@ -36,27 +36,28 @@ public class TestCarController {
     private ICarMapper carMapper;
 
     @Before
-    private void setUp() {
+    public void setUp() {
 
         MockitoAnnotations.initMocks(this);
 
     }
 
     @Test
-    private void unitTestForGetAllCars() {
+    public void unitTestForGetAllCars() {
 
     List<Car> lCars = new ArrayList<>();
     lCars.add(Car.builder().build());
     lCars.add(Car.builder().build());
 
     Mockito.when(carRepository.findAll()).thenReturn(lCars);
-    Mockito.when(carMapper.carToJsonOutputCar(lCars.get(0))).thenReturn(JsonOutputCar.builder().build());
-    Mockito.when(carMapper.carToJsonOutputCar(lCars.get(1))).thenReturn(JsonOutputCar.builder().build());
+    Mockito.when(carMapper.INSTANCE.carToJsonOutputCar(lCars.get(0))).thenReturn(JsonOutputCar.builder().build());
+    Mockito.when(carMapper.INSTANCE.carToJsonOutputCar(lCars.get(1))).thenReturn(JsonOutputCar.builder().build());
 
     ResponseEntity<List<JsonOutputCar>> httpResponse = carController.getAllCars();
 
     Assert.assertNotNull(httpResponse.getBody());
     Assert.assertEquals(httpResponse.getStatusCode(), HttpStatus.OK);
+    Assert.assertEquals(lCars.size(), httpResponse.getBody().size());
 }
 
 
