@@ -22,6 +22,7 @@
 		<fabric8.version>0.31.0</fabric8.version>
 		<fabric8.javaimage.alias>${project.name}</fabric8.javaimage.alias>
 		<fabric8.db.name>db-local</fabric8.db.name>
+		<lombok.version>1.18.12</lombok.version>
 	</properties>
 
 	<dependencies>
@@ -49,6 +50,7 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+			<version>${lombok.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -69,7 +71,21 @@
     		<groupId>org.mapstruct</groupId>
     		<artifactId>mapstruct-jdk8</artifactId>
     		<version>${mapstruct.version}</version> 
-</dependency>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4 -->
+		<dependency>
+		    <groupId>org.powermock</groupId>
+		    <artifactId>powermock-module-junit4</artifactId>
+		    <version>2.0.7</version>
+		    <scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito2 -->
+		<dependency>
+    		<groupId>org.powermock</groupId>
+    		<artifactId>powermock-api-mockito2</artifactId>
+    		<version>2.0.7</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -119,6 +135,11 @@
 							<groupId>org.mapstruct</groupId>
 							<artifactId>mapstruct-processor</artifactId>
 							<version>${mapstruct.version}</version>
+						</path>
+						<path>
+                			<groupId>org.projectlombok</groupId>
+                			<artifactId>lombok</artifactId>
+							<version>${lombok.version}</version>
 						</path>
 					</annotationProcessorPaths>
 				</configuration>

@@ -10,13 +10,12 @@ import org.mapstruct.factory.Mappers;
 /**
  * CarMapper
  */
-@Mapper(componentModel = "spring")
+@Mapper
 public interface ICarMapper {
 
     ICarMapper INSTANCE = Mappers.getMapper(ICarMapper.class);
 
     @Mapping(source = "modelName", target = "modelName")
-    @Mapping(source = "releaseDate", target = "releaseDate")
-    @Mapping(source = "brand.brandName", target = "brandName")
+    @Mapping(source = "releaseDate", target = "realeseDate")
     JsonOutputCar carToJsonOutputCar(Car car);
 }

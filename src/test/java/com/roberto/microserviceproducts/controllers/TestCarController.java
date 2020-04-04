@@ -17,13 +17,16 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.powermock.core.classloader.annotations.PrepareForTest;
+import org.powermock.modules.junit4.PowerMockRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest()
+import static org.powermock.api.mockito.PowerMockito.mockStatic;
+@RunWith(PowerMockRunner.class)
+@SpringBootTest
+@PrepareForTest(ICarMapper.class)
 public class TestCarController {
 
     @InjectMocks
@@ -45,13 +48,15 @@ public class TestCarController {
     @Test
     public void unitTestForGetAllCars() {
 
+    mockStatic(ICarMapper.class);
+
     List<Car> lCars = new ArrayList<>();
     lCars.add(Car.builder().build());
     lCars.add(Car.builder().build());
 
     Mockito.when(carRepository.findAll()).thenReturn(lCars);
-    Mockito.when(carMapper.INSTANCE.carToJsonOutputCar(lCars.get(0))).thenReturn(JsonOutputCar.builder().build());
-    Mockito.when(carMapper.INSTANCE.carToJsonOutputCar(lCars.get(1))).thenReturn(JsonOutputCar.builder().build());
+    Mockito.when(ICarMapper.INSTANCE.carToJsonOutputCar(lCars.get(0))).thenReturn(JsonOutputCar.builder().build());
+    // Mockito.when(carMapper.INSTANCE.carToJsonOutputCar(lCars.get(1))).thenReturn(JsonOutputCar.builder().build());
 
     ResponseEntity<List<JsonOutputCar>> httpResponse = carController.getAllCars();
 
